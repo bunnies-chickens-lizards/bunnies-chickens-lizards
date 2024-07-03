@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyla's Bunny, Chicken & Lizard Rescue</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        header {
+            background-color: #1f610b; /* Pink */
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        nav {
+            background-color: #0e4210; /* Green */
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #0c460f;
+            color: white;
+        }
+        .container {
+            padding: 2rem;
+        }
+        .hero {
+            background: url('bunnies.jpg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            border-bottom: 4px solid #1f610b;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .card {
+            background-color: white;
+            width: 300px;
+            margin: 1rem;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+            position: relative; /* For positioning the tooltip */
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card-body {
+            padding: 1rem;
+            text-align: center;
+        }
+        .card h2 {
+            color: #1a7212; /* Pink */
+            margin: 0 0 0.5rem;
+        }
+        .card p {
+            margin: 0 0 1rem;
+        }
+        .card button {
+            background-color: #1a7212;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+            position: relative;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            top: -70px; /* Adjusted for larger tooltip */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #fff;
+            color: #333;
+            padding: 15px; /* Increased padding */
+            border: 1px solid #ddd;
+            border-radius: 14px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            z-index: 1000;
+            width: 300px; /* Increased width */
+            text-align: left;
+            font-size: 14px; /* Adjusted font size */
+        }
+        .card button:hover .tooltip {
+            display: block;
+        }
+        footer {
+            background-color: #424442; /* Green */
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            border-top: 4px solid #1a7212;
+        }
+        #about {
+            text-align: center;
+            padding: 2rem 0;
+        }
+        #about h2 {
+            color: #1a7212;
+        }
+        .fun-facts {
+            background-color: #ffebcd;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .fun-facts h2 {
+            color: #1a7212;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lyla's Bunny, Chicken & Lizard Rescue</h1>
+    </header>
+    <nav>
+        <a href="#animals">lyla.bunnies.chickens.lizards@gmail.com</a>
+        <a href="#contact">941-404-6083</a>
+    </nav>
+    <div class="hero">
+    </div>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi I am Lyla, I will collect any unwanted Bunnies, Chickens & Lizards and provide them with a new home. I am 8 years old and I love animals. We have a lush green acre with a large pond and plenty of space for all the rescue animals that I can find.</p>
+        </section>
+        <section id="fun-facts" class="fun-facts">
+            <h2>Fun Facts About Our Animals!</h2>
+            <p>Did you know that rabbits can rotate their ears 180 degrees? Or that chickens have excellent memories and can recognize over 100 different faces? Lizards can even shed their tails to escape predators!</p>
+        </section>
+        <section id="animals">
+            <div class="content">
+                <div class="card">
+                    <img src="bunny.jpg" alt="Bunny">
+                    <div class="card-body">
+                        <h2>Bunnies</h2>
+                        <p>What do you call a bunny who tells jokes? A funny bunny!</p>
+                        <button>Learn More
+                            <div class="tooltip">
+                                Bunnies are highly social creatures. In the wild, they live in groups called colonies or warrens. They thrive on companionship and can get lonely or depressed if kept alone for too long.
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="chicks.webp" alt="Chicken">
+                    <div class="card-body">
+                        <h2>Chickens</h2>
+                        <p>Why did the chicken join a band? Because it had the drumsticks!</p>
+                        <button>Learn More
+                            <div class="tooltip">
+                                Chickens love to take dust baths to keep clean and free of parasites. They dig a shallow pit in the ground, toss dirt over themselves, and then shake it off, which helps maintain their plumage and skin health.
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="lizard.avif" alt="Lizard">
+                    <div class="card-body">
+                        <h2>Lizards</h2>
+                        <p>What do you call a lizard that sings? A rap-tile!</p>
+                        <button>Learn More
+                            <div class="tooltip">
+                                Some lizards, such as the green iguana, have a "third eye" on the top of their heads called a parietal eye. This eye is not for detailed vision but helps them sense changes in light and detect predators from above.
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Animal Sanctuary. All rights reserved.</p>
+    </footer>
+</body>
+</html>
